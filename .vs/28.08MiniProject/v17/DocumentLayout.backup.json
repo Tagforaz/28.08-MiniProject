@@ -1,0 +1,62 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{59444920-35FA-4396-9C56-76C56BC7FB67}|28.08MiniProject\\28.08MiniProject.csproj|c:\\users\\tagforaz\\desktop\\pb306\\28.08miniproject\\28.08miniproject\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59444920-35FA-4396-9C56-76C56BC7FB67}|28.08MiniProject\\28.08MiniProject.csproj|solutionrelative:28.08miniproject\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59444920-35FA-4396-9C56-76C56BC7FB67}|28.08MiniProject\\28.08MiniProject.csproj|c:\\users\\tagforaz\\desktop\\pb306\\28.08miniproject\\28.08miniproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59444920-35FA-4396-9C56-76C56BC7FB67}|28.08MiniProject\\28.08MiniProject.csproj|solutionrelative:28.08miniproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\28.08MiniProject\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "28.08MiniProject\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\28.08MiniProject\\Models\\Product.cs",
+              "RelativeToolTip": "28.08MiniProject\\Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T14:12:41.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\28.08MiniProject\\Program.cs",
+              "RelativeDocumentMoniker": "28.08MiniProject\\Program.cs",
+              "ToolTip": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\28.08MiniProject\\Program.cs",
+              "RelativeToolTip": "28.08MiniProject\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-28T14:11:11.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
