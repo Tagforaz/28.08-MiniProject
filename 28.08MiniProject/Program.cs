@@ -1,10 +1,13 @@
-﻿namespace _28._08MiniProject
+﻿using static System.Net.Mime.MediaTypeNames;
+
+namespace _28._08MiniProject
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            ManagementApplication app = new ManagementApplication();
+            app.Run();
         }
     }
 }

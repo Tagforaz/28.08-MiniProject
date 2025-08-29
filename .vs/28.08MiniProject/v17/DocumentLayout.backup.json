@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{59444920-35FA-4396-9C56-76C56BC7FB67}|28.08MiniProject\\28.08MiniProject.csproj|c:\\users\\tagforaz\\desktop\\pb306\\28.08miniproject\\28.08miniproject\\services\\productservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59444920-35FA-4396-9C56-76C56BC7FB67}|28.08MiniProject\\28.08MiniProject.csproj|solutionrelative:28.08miniproject\\services\\productservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59444920-35FA-4396-9C56-76C56BC7FB67}|28.08MiniProject\\28.08MiniProject.csproj|c:\\users\\tagforaz\\desktop\\pb306\\28.08miniproject\\28.08miniproject\\data\\product.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{59444920-35FA-4396-9C56-76C56BC7FB67}|28.08MiniProject\\28.08MiniProject.csproj|solutionrelative:28.08miniproject\\data\\product.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{59444920-35FA-4396-9C56-76C56BC7FB67}|28.08MiniProject\\28.08MiniProject.csproj|c:\\users\\tagforaz\\desktop\\pb306\\28.08miniproject\\28.08miniproject\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{59444920-35FA-4396-9C56-76C56BC7FB67}|28.08MiniProject\\28.08MiniProject.csproj|solutionrelative:28.08miniproject\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59444920-35FA-4396-9C56-76C56BC7FB67}|28.08MiniProject\\28.08MiniProject.csproj|c:\\users\\tagforaz\\desktop\\pb306\\28.08miniproject\\28.08miniproject\\models\\base\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59444920-35FA-4396-9C56-76C56BC7FB67}|28.08MiniProject\\28.08MiniProject.csproj|solutionrelative:28.08miniproject\\models\\base\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59444920-35FA-4396-9C56-76C56BC7FB67}|28.08MiniProject\\28.08MiniProject.csproj|c:\\users\\tagforaz\\desktop\\pb306\\28.08miniproject\\28.08miniproject\\managementapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59444920-35FA-4396-9C56-76C56BC7FB67}|28.08MiniProject\\28.08MiniProject.csproj|solutionrelative:28.08miniproject\\managementapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59444920-35FA-4396-9C56-76C56BC7FB67}|28.08MiniProject\\28.08MiniProject.csproj|c:\\users\\tagforaz\\desktop\\pb306\\28.08miniproject\\28.08miniproject\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59444920-35FA-4396-9C56-76C56BC7FB67}|28.08MiniProject\\28.08MiniProject.csproj|solutionrelative:28.08miniproject\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59444920-35FA-4396-9C56-76C56BC7FB67}|28.08MiniProject\\28.08MiniProject.csproj|c:\\users\\tagforaz\\desktop\\pb306\\28.08miniproject\\28.08miniproject\\utilities\\enums\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59444920-35FA-4396-9C56-76C56BC7FB67}|28.08MiniProject\\28.08MiniProject.csproj|solutionrelative:28.08miniproject\\utilities\\enums\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59444920-35FA-4396-9C56-76C56BC7FB67}|28.08MiniProject\\28.08MiniProject.csproj|c:\\users\\tagforaz\\desktop\\pb306\\28.08miniproject\\28.08miniproject\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59444920-35FA-4396-9C56-76C56BC7FB67}|28.08MiniProject\\28.08MiniProject.csproj|solutionrelative:28.08miniproject\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{59444920-35FA-4396-9C56-76C56BC7FB67}|28.08MiniProject\\28.08MiniProject.csproj|c:\\users\\tagforaz\\desktop\\pb306\\28.08miniproject\\28.08miniproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -18,30 +46,121 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "product.json",
+              "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\28.08MiniProject\\Data\\product.json",
+              "RelativeDocumentMoniker": "28.08MiniProject\\Data\\product.json",
+              "ToolTip": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\28.08MiniProject\\Data\\product.json",
+              "RelativeToolTip": "28.08MiniProject\\Data\\product.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-29T17:38:41.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ProductServices.cs",
+              "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\28.08MiniProject\\Services\\ProductServices.cs",
+              "RelativeDocumentMoniker": "28.08MiniProject\\Services\\ProductServices.cs",
+              "ToolTip": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\28.08MiniProject\\Services\\ProductServices.cs",
+              "RelativeToolTip": "28.08MiniProject\\Services\\ProductServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T17:24:03.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\28.08MiniProject\\Models\\Base\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "28.08MiniProject\\Models\\Base\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\28.08MiniProject\\Models\\Base\\BaseEntity.cs",
+              "RelativeToolTip": "28.08MiniProject\\Models\\Base\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T16:39:17.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderStatus.cs",
+              "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\28.08MiniProject\\Utilities\\Enums\\OrderStatus.cs",
+              "RelativeDocumentMoniker": "28.08MiniProject\\Utilities\\Enums\\OrderStatus.cs",
+              "ToolTip": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\28.08MiniProject\\Utilities\\Enums\\OrderStatus.cs",
+              "RelativeToolTip": "28.08MiniProject\\Utilities\\Enums\\OrderStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T16:33:59.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\28.08MiniProject\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "28.08MiniProject\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\28.08MiniProject\\Models\\Order.cs",
+              "RelativeToolTip": "28.08MiniProject\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T16:26:03.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\28.08MiniProject\\Models\\OrderItem.cs",
+              "RelativeDocumentMoniker": "28.08MiniProject\\Models\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\28.08MiniProject\\Models\\OrderItem.cs",
+              "RelativeToolTip": "28.08MiniProject\\Models\\OrderItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T16:12:46.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ManagementApplication.cs",
+              "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\28.08MiniProject\\ManagementApplication.cs",
+              "RelativeDocumentMoniker": "28.08MiniProject\\ManagementApplication.cs",
+              "ToolTip": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\28.08MiniProject\\ManagementApplication.cs",
+              "RelativeToolTip": "28.08MiniProject\\ManagementApplication.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAkwBwAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-29T15:44:44.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\28.08MiniProject\\Models\\Product.cs",
               "RelativeDocumentMoniker": "28.08MiniProject\\Models\\Product.cs",
               "ToolTip": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\28.08MiniProject\\Models\\Product.cs",
               "RelativeToolTip": "28.08MiniProject\\Models\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-28T14:12:41.253Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\28.08MiniProject\\Program.cs",
               "RelativeDocumentMoniker": "28.08MiniProject\\Program.cs",
               "ToolTip": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\28.08MiniProject\\Program.cs",
               "RelativeToolTip": "28.08MiniProject\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-28T14:11:11.714Z",
               "EditorCaption": ""

@@ -1,0 +1,15 @@
+C:\Users\Tagforaz\Desktop\Pb306\28.08MiniProject\28.08MiniProject\bin\Debug\net8.0\28.08MiniProject.exe
+C:\Users\Tagforaz\Desktop\Pb306\28.08MiniProject\28.08MiniProject\bin\Debug\net8.0\28.08MiniProject.deps.json
+C:\Users\Tagforaz\Desktop\Pb306\28.08MiniProject\28.08MiniProject\bin\Debug\net8.0\28.08MiniProject.runtimeconfig.json
+C:\Users\Tagforaz\Desktop\Pb306\28.08MiniProject\28.08MiniProject\bin\Debug\net8.0\28.08MiniProject.dll
+C:\Users\Tagforaz\Desktop\Pb306\28.08MiniProject\28.08MiniProject\bin\Debug\net8.0\28.08MiniProject.pdb
+C:\Users\Tagforaz\Desktop\Pb306\28.08MiniProject\28.08MiniProject\obj\Debug\net8.0\28.08MiniProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tagforaz\Desktop\Pb306\28.08MiniProject\28.08MiniProject\obj\Debug\net8.0\28.08MiniProject.AssemblyInfoInputs.cache
+C:\Users\Tagforaz\Desktop\Pb306\28.08MiniProject\28.08MiniProject\obj\Debug\net8.0\28.08MiniProject.AssemblyInfo.cs
+C:\Users\Tagforaz\Desktop\Pb306\28.08MiniProject\28.08MiniProject\obj\Debug\net8.0\28.08MiniProject.csproj.CoreCompileInputs.cache
+C:\Users\Tagforaz\Desktop\Pb306\28.08MiniProject\28.08MiniProject\obj\Debug\net8.0\28.08MiniProject.sourcelink.json
+C:\Users\Tagforaz\Desktop\Pb306\28.08MiniProject\28.08MiniProject\obj\Debug\net8.0\28.08MiniProject.dll
+C:\Users\Tagforaz\Desktop\Pb306\28.08MiniProject\28.08MiniProject\obj\Debug\net8.0\refint\28.08MiniProject.dll
+C:\Users\Tagforaz\Desktop\Pb306\28.08MiniProject\28.08MiniProject\obj\Debug\net8.0\28.08MiniProject.pdb
+C:\Users\Tagforaz\Desktop\Pb306\28.08MiniProject\28.08MiniProject\obj\Debug\net8.0\28.08MiniProject.genruntimeconfig.cache
+C:\Users\Tagforaz\Desktop\Pb306\28.08MiniProject\28.08MiniProject\obj\Debug\net8.0\ref\28.08MiniProject.dll
