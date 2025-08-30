@@ -1,19 +1,22 @@
 ﻿using _28._08MiniProject.Models;
+using _28._08MiniProject.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace _28._08MiniProject
 {
     internal class ManagementApplication
     {
+        private ProductServices productServices=new ProductServices();
         public void Run()
         {
 
             int num = 0;
-            string str = null;
+            string ?str = null;
             bool result = false;
 
 
@@ -26,7 +29,7 @@ namespace _28._08MiniProject
                 switch (num)
                 {
                     case 1:
-                        
+                        productServices.CreateProduct();
                         Console.WriteLine("Product Created");
                         break;
                     case 2:

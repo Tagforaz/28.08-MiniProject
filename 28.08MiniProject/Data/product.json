@@ -1,3 +1,38 @@
-{
-
-}
+[
+  {
+    "Name": "ad",
+    "Price": 12.0,
+    "Stock": 13.0,
+    "Id": 1
+  },
+  {
+    "Name": "ad",
+    "Price": 12.0,
+    "Stock": 12.0,
+    "Id": 1
+  },
+  {
+    "Name": "asda",
+    "Price": 1.0,
+    "Stock": 2.0,
+    "Id": 1
+  },
+  {
+    "Name": "da",
+    "Price": 23.0,
+    "Stock": 22.0,
+    "Id": 4
+  },
+  {
+    "Name": "iphone",
+    "Price": 12.0,
+    "Stock": 4.0,
+    "Id": 1
+  },
+  {
+    "Name": "as",
+    "Price": 12.0,
+    "Stock": 1.0,
+    "Id": 1
+  }
+]

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "TdHJg/LkGx0=",
+  "dgSpecHash": "3fZwOY/Kchs=",
   "success": true,
   "projectFilePath": "C:\\Users\\Tagforaz\\Desktop\\Pb306\\28.08MiniProject\\28.08MiniProject\\28.08MiniProject.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Tagforaz\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -4,16 +4,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Newtonsoft.Json;
 namespace _28._08MiniProject.Models
 {
     internal class Product:BaseEntity
     {
 
         private static int p_count = 0;
-        private string _name { get; set; }
-        public decimal _price { get; set; }
-        public double Stock { get; set; }
+         string? _name { get; set; }
+         decimal _price { get; set; }
+         double _stock { get; set; }
         public Product(string name,decimal price,double stock)
         {
             Id = ++p_count;
@@ -40,13 +40,21 @@ namespace _28._08MiniProject.Models
             {
                 if (value > 0)
                 {
-                    _price = value;
+                    if (value > 0) { _price = value; }
                 }
+            }
+        }
+        public double Stock
+        {
+            get { return _stock; }
+            set
+            {
+                if (value > 0) { _stock = value; }
             }
         }
         public void PrintInfo()
         {
-
+            Console.WriteLine($"Product:{Name},Price:{Price},Stock:{Stock}");
         }
     }
 }
