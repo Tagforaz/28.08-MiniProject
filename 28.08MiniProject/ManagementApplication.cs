@@ -30,19 +30,18 @@ namespace _28._08MiniProject
                 {
                     case 1:
                         productServices.CreateProduct();
-                        Console.WriteLine("Product Created");
                         break;
                     case 2:
-                        Console.WriteLine("Product Deleted");
+                        productServices.DeleteProduct();
                         break;
                     case 3:
-                        Console.WriteLine("Id's product:");
+                        productServices.GetProductById();
                         break;
                     case 4:
-                        Console.WriteLine("Product Refilled");
+                        productServices.ShowAllProduct();
                         break;
                     case 5:
-                        Console.WriteLine("Product ordered");
+                        productServices.RefillProduct();
                         break;
                     case 6:
                         Console.WriteLine("All product: ");
@@ -50,8 +49,9 @@ namespace _28._08MiniProject
                     case 7:
                         Console.WriteLine("Order status changed");
                         break;
+                    case 8:
+                        break;
                     case 0:
-                        Console.WriteLine("Program Ended");
                         break;
                     default:
                         Console.WriteLine("Wrong Input. Please Try Again");

@@ -1,38 +1,32 @@
 [
   {
-    "Name": "ad",
-    "Price": 12.0,
-    "Stock": 13.0,
-    "Id": 1
+    "Id": "df144e89-d246-4488-9835-2f7e22f84bcc",
+    "Name": "Tv",
+    "Price": 120.0,
+    "Stock": 17.0
   },
   {
-    "Name": "ad",
-    "Price": 12.0,
-    "Stock": 12.0,
-    "Id": 1
-  },
-  {
-    "Name": "asda",
+    "Id": "92430041-da71-4d85-8abd-56c84b716d63",
+    "Name": "1",
     "Price": 1.0,
-    "Stock": 2.0,
-    "Id": 1
+    "Stock": 3.0
   },
   {
-    "Name": "da",
-    "Price": 23.0,
-    "Stock": 22.0,
-    "Id": 4
+    "Id": "b9b2f227-6dce-4885-91a0-2b509006f606",
+    "Name": "a",
+    "Price": 6.0,
+    "Stock": 5.0
   },
   {
-    "Name": "iphone",
-    "Price": 12.0,
-    "Stock": 4.0,
-    "Id": 1
+    "Id": "a1b24f1e-534b-4716-ae35-f30096df377c",
+    "Name": "AS",
+    "Price": 7.0,
+    "Stock": 0.0
   },
   {
-    "Name": "as",
-    "Price": 12.0,
-    "Stock": 1.0,
-    "Id": 1
+    "Id": "6686a7fd-56f6-467d-ac07-f4a58bf700be",
+    "Name": "ATA",
+    "Price": 5.0,
+    "Stock": 6.0
   }
 ]

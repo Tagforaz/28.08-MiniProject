@@ -9,52 +9,20 @@ namespace _28._08MiniProject.Models
 {
     internal class Product:BaseEntity
     {
-
-        private static int p_count = 0;
-         string? _name { get; set; }
-         decimal _price { get; set; }
-         double _stock { get; set; }
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public double Stock { get; set; }
         public Product(string name,decimal price,double stock)
         {
-            Id = ++p_count;
+            Id = Guid.NewGuid();
             Name = name;
             Price = price;
             Stock = stock;
         }
-
-       
-
-        public string Name
-        {
-            get{return _name;}
-            set
-            {
-                if (value.Length >= 1)
-                _name = value;
-            }
-        }
-        public decimal Price
-        {
-            get { return _price; }
-            set
-            {
-                if (value > 0)
-                {
-                    if (value > 0) { _price = value; }
-                }
-            }
-        }
-        public double Stock
-        {
-            get { return _stock; }
-            set
-            {
-                if (value > 0) { _stock = value; }
-            }
-        }
         public void PrintInfo()
         {
-            Console.WriteLine($"Product:{Name},Price:{Price},Stock:{Stock}");
+            Console.WriteLine($"Product Name: {Name}, Price: {Price}, Stock: {Stock}");
         }
     }
 }
