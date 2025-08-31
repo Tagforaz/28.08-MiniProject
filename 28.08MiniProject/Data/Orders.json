@@ -1,0 +1,177 @@
+[
+  {
+    "Items": [
+      {
+        "Products": [
+          {
+            "Id": "3dbbb2f9-bb50-4741-9822-c2be55988a3e",
+            "Name": "TGDF",
+            "Price": 34.0,
+            "Stock": 100.0
+          }
+        ],
+        "Count": 100.0,
+        "ProductPrice": 34.0,
+        "SubTotal": 3400.0,
+        "Id": "f02792e6-9f5d-4305-9820-7b79e164d598"
+      }
+    ],
+    "Total": 3400,
+    "Email": "ada@af",
+    "Status": 1,
+    "OrderedAt": "2025-08-31T13:42:03.5499274+04:00",
+    "Id": "7005b1ca-c68c-44d2-b603-3ed389d8f19d"
+  },
+  {
+    "Items": [
+      {
+        "Products": [
+          {
+            "Id": "67dc469d-5088-4d42-8114-67923c9eb740",
+            "Name": "AF",
+            "Price": 31.0,
+            "Stock": 241.0
+          }
+        ],
+        "Count": 100.0,
+        "ProductPrice": 31.0,
+        "SubTotal": 3100.0,
+        "Id": "34c0d043-17f5-447e-b077-395f1910393c"
+      }
+    ],
+    "Total": 3100,
+    "Email": "afaf@vfasdfg",
+    "Status": 1,
+    "OrderedAt": "2025-08-31T13:46:39.9128686+04:00",
+    "Id": "ef927169-c7a9-4d4a-820c-6222d4ccf6fb"
+  },
+  {
+    "Items": [
+      {
+        "Products": [
+          {
+            "Id": "3dbbb2f9-bb50-4741-9822-c2be55988a3e",
+            "Name": "TGDF",
+            "Price": 34.0,
+            "Stock": 80.0
+          }
+        ],
+        "Count": 20.0,
+        "ProductPrice": 34.0,
+        "SubTotal": 680.0,
+        "Id": "27e7a700-f76b-4b55-ab4b-df9cf3d4550a"
+      }
+    ],
+    "Total": 680,
+    "Email": "adfafd@",
+    "Status": 1,
+    "OrderedAt": "2025-08-31T13:59:08.1077223+04:00",
+    "Id": "785b7843-4fd1-491e-9c28-ef02d0225d3c"
+  },
+  {
+    "Items": [
+      {
+        "Products": [
+          {
+            "Id": "3dbbb2f9-bb50-4741-9822-c2be55988a3e",
+            "Name": "TGDF",
+            "Price": 34.0,
+            "Stock": 60.0
+          }
+        ],
+        "Count": 20.0,
+        "ProductPrice": 34.0,
+        "SubTotal": 680.0,
+        "Id": "8a32ed01-08bd-43dc-a0a0-3f0676c51958"
+      },
+      {
+        "Products": [
+          {
+            "Id": "8a3e1c15-30fd-41e2-aa94-8b6f0eac7a42",
+            "Name": "141",
+            "Price": 141.0,
+            "Stock": 412.0
+          }
+        ],
+        "Count": 1000.0,
+        "ProductPrice": 141.0,
+        "SubTotal": 141000.0,
+        "Id": "9c8bfd9d-6658-4a84-9aa7-be29031d4475"
+      }
+    ],
+    "Total": 141680,
+    "Email": "fafa@afa",
+    "Status": 2,
+    "OrderedAt": "2025-08-31T14:00:03.5095267+04:00",
+    "Id": "81448b29-fab5-4eaa-84a6-c47fbf38bda7"
+  },
+  {
+    "Items": [
+      {
+        "Products": [
+          {
+            "Id": "8a3e1c15-30fd-41e2-aa94-8b6f0eac7a42",
+            "Name": "141",
+            "Price": 141.0,
+            "Stock": 381.0
+          }
+        ],
+        "Count": 31.0,
+        "ProductPrice": 141.0,
+        "SubTotal": 4371.0,
+        "Id": "cc0728df-7b79-42d8-86a2-43d2d65ff28e"
+      }
+    ],
+    "Total": 4371,
+    "Email": "afaf@",
+    "Status": 1,
+    "OrderedAt": "2025-08-31T14:10:01.7032083+04:00",
+    "Id": "07c30fcb-be3a-4f79-8c1a-f585af0d18a1"
+  },
+  {
+    "Items": [
+      {
+        "Products": [
+          {
+            "Id": "3dbbb2f9-bb50-4741-9822-c2be55988a3e",
+            "Name": "TGDF",
+            "Price": 34.0,
+            "Stock": 40.0
+          }
+        ],
+        "Count": 20.0,
+        "ProductPrice": 34.0,
+        "SubTotal": 680.0,
+        "Id": "17ba5cbc-0b7e-486e-ab6f-7d301a18ce53"
+      }
+    ],
+    "Total": 680,
+    "Email": "afafa@",
+    "Status": 1,
+    "OrderedAt": "2025-08-31T14:15:14.7691792+04:00",
+    "Id": "9716dfc0-1d5d-4007-9812-a3198e43aa2b"
+  },
+  {
+    "Items": [
+      {
+        "Products": [
+          {
+            "Id": "59aee5ef-acbb-4203-900d-3d56642a8fda",
+            "Name": "545",
+            "Price": 252.0,
+            "Stock": 1345.0
+          }
+        ],
+        "Count": 1000.0,
+        "ProductPrice": 252.0,
+        "SubTotal": 252000.0,
+        "Id": "7702db70-b80a-4c03-a708-f37d653a49e7"
+      }
+    ],
+    "Total": 252000,
+    "Email": "sabnam@",
+    "Status": 1,
+    "OrderedAt": "2025-08-31T14:38:05.9979838+04:00",
+    "Id": "908f318b-7418-42e2-b067-13ad6f6ee50c"
+  }
+]

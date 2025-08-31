@@ -25,6 +25,7 @@ namespace _28._08MiniProject.Services
                 name = Console.ReadLine().ToUpper().Trim();
                 if (string.IsNullOrEmpty(name) || name.Length < 1)
                 {
+                    Console.Clear();
                     Console.WriteLine("Name must be at least one character long.");
                 }
             } while (string.IsNullOrEmpty(name) || name.Length < 1); 
@@ -35,6 +36,7 @@ namespace _28._08MiniProject.Services
                 string priceInput = Console.ReadLine().Trim();
                 if (!decimal.TryParse(priceInput, out price) || price <= 0)
                 {
+                    Console.Clear();
                     Console.WriteLine("Price will not null and must be a valid number greater than 0.");
                 }
             } while (price <= 0);
@@ -45,6 +47,7 @@ namespace _28._08MiniProject.Services
                 string stockInput = Console.ReadLine().Trim();
                 if (!double.TryParse(stockInput, out stock) || stock <= 0)
                 {
+                    Console.Clear();
                     Console.WriteLine("Stock will not null and must be a valid number greater than 0.");
                 }
             } while (stock <= 0);
@@ -53,14 +56,17 @@ namespace _28._08MiniProject.Services
             List<Product> products = ReadProduct();
             products.Add(product);
             WriteProduct(products);
+            
 
         }
         public void DeleteProduct()
         {
+            ShowAllProduct();
             Console.WriteLine("Please,input product's id for delete:");
             Guid id;
             while (!Guid.TryParse(Console.ReadLine(), out id))
             {
+                Console.Clear();
                 Console.WriteLine("Wrong Id. Please enter a product ID.");
             }
             List<Product> products = ReadProduct();
@@ -73,6 +79,7 @@ namespace _28._08MiniProject.Services
             }
             else
             {
+                Console.Clear();
                 Console.WriteLine("Product not found.");
             }
         }
@@ -83,6 +90,7 @@ namespace _28._08MiniProject.Services
             Guid id;
             while (!Guid.TryParse(Console.ReadLine(), out id))
             {
+                Console.Clear();
                 Console.WriteLine("Wrong Id. Please enter a product ID.");
             }
             List<Product> products = ReadProduct();
@@ -94,6 +102,7 @@ namespace _28._08MiniProject.Services
             }
             else
             {
+                Console.Clear();
                 Console.WriteLine("Product not found.");
             }
         }
@@ -102,6 +111,7 @@ namespace _28._08MiniProject.Services
             List<Product> products = ReadProduct();
             if (products.Count == 0)
             {
+                Console.Clear();
                 Console.WriteLine("You have noy any product.");
                 return;
             }
@@ -117,15 +127,17 @@ namespace _28._08MiniProject.Services
                 {
                     stockStatus = "Out of Stock";
                 }
-                Console.WriteLine($"Product: {product.Name}, Price: {product.Price:C}, {stockStatus}");
+                Console.WriteLine($"Id: {product.Id}, Product: {product.Name}, Price: {product.Price:C}, {stockStatus}");
             }
         }
         public void RefillProduct()
         {
-            Console.WriteLine("Please input product's id to refill stock:");
+            ShowAllProduct();
+            Console.WriteLine("Please input product's id to refill stock:(negative number=>decrease,positive number=>increase)");
             Guid id;
             while (!Guid.TryParse(Console.ReadLine(), out id))
             {
+                Console.Clear();
                 Console.WriteLine("Wrong Id. Please enter a valid product ID.");
             }
             List<Product> products = ReadProduct();
@@ -144,6 +156,7 @@ namespace _28._08MiniProject.Services
                     }
                     if (productToRefill.Stock + refillAmount < 0)
                     {
+                        Console.Clear();
                         Console.WriteLine("Stock must be greater than 0.");
                     }
                     else
@@ -156,6 +169,7 @@ namespace _28._08MiniProject.Services
             }
             else
             {
+                Console.Clear();
                 Console.WriteLine("Product not found.");
             }
         }     

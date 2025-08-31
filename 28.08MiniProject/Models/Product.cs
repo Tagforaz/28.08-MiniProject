@@ -22,7 +22,7 @@ namespace _28._08MiniProject.Models
         }
         public void PrintInfo()
         {
-            Console.WriteLine($"Product Name: {Name}, Price: {Price}, Stock: {Stock}");
+            Console.WriteLine($"Id : {Id}, Product Name: {Name}, Price: {Price}, Stock: {Stock}");
         }
     }
 }

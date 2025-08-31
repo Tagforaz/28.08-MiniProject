@@ -12,6 +12,7 @@ namespace _28._08MiniProject
     internal class ManagementApplication
     {
         private ProductServices productServices=new ProductServices();
+        private OrderServices orderServices=new OrderServices();
         public void Run()
         {
 
@@ -22,8 +23,10 @@ namespace _28._08MiniProject
 
             while (!(num == 0 && result))
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("1.Create Product\n2.Delete Product\n3.Get Product By Id\n4.Show All Product\n5.Refill Product\n6.Order Product\n7.Show All Orders\n8.Charge Order Status\n\n0.Quit");
                 str = Console.ReadLine();
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.Clear();
                 result = int.TryParse(str, out num);
                 switch (num)
@@ -44,13 +47,14 @@ namespace _28._08MiniProject
                         productServices.RefillProduct();
                         break;
                     case 6:
-                        Console.WriteLine("All product: ");
+                        orderServices.CreateOrder();
                         break;
                     case 7:
-                        Console.WriteLine("Order status changed");
+                        orderServices.ShowAllOrders();
                         break;
                     case 8:
-                        break;
+                        orderServices.ChangeOrderStatus();
+                        break;       
                     case 0:
                         break;
                     default:

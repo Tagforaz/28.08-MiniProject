@@ -11,12 +11,15 @@ namespace _28._08MiniProject.Models
 {
     internal class Order:BaseEntity
     {
-
         public List<OrderItem>? Items {  get; set; }
         public int Total { get; set; }
         public string? Email {  get; set; }
         public OrderStatus Status { get; set; }
         public DateTime OrderedAt { get; set; }
+        public void PrintInfo()
+        {
+            Console.WriteLine($"Items: {Items},Total:{Total},Email:{Email},Status:{Status},Time: {OrderedAt}"); 
+        }
 
     }
 }

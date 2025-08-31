@@ -9,7 +9,7 @@ namespace _28._08MiniProject.Utilities.Enums
 {
     internal enum  OrderStatus
     {
-        Pending = 1,
+        Pending =1 ,
         Confirmed = 2,
         Completed= 3
     }

@@ -1,32 +1,50 @@
 [
   {
-    "Id": "df144e89-d246-4488-9835-2f7e22f84bcc",
-    "Name": "Tv",
-    "Price": 120.0,
-    "Stock": 17.0
+    "Id": "0c900a21-1bdf-499c-acd9-1884bf475aef",
+    "Name": "UYT",
+    "Price": 25.0,
+    "Stock": 4.0
   },
   {
-    "Id": "92430041-da71-4d85-8abd-56c84b716d63",
-    "Name": "1",
-    "Price": 1.0,
-    "Stock": 3.0
+    "Id": "3dbbb2f9-bb50-4741-9822-c2be55988a3e",
+    "Name": "TGDF",
+    "Price": 34.0,
+    "Stock": 40.0
   },
   {
-    "Id": "b9b2f227-6dce-4885-91a0-2b509006f606",
-    "Name": "a",
-    "Price": 6.0,
-    "Stock": 5.0
+    "Id": "67dc469d-5088-4d42-8114-67923c9eb740",
+    "Name": "AF",
+    "Price": 31.0,
+    "Stock": 241.0
   },
   {
-    "Id": "a1b24f1e-534b-4716-ae35-f30096df377c",
-    "Name": "AS",
-    "Price": 7.0,
-    "Stock": 0.0
+    "Id": "8a3e1c15-30fd-41e2-aa94-8b6f0eac7a42",
+    "Name": "141",
+    "Price": 141.0,
+    "Stock": 381.0
   },
   {
-    "Id": "6686a7fd-56f6-467d-ac07-f4a58bf700be",
-    "Name": "ATA",
-    "Price": 5.0,
-    "Stock": 6.0
+    "Id": "8c0e98b3-9c9d-4678-a90c-342ad7f7164f",
+    "Name": "123",
+    "Price": 214.0,
+    "Stock": 1.0
+  },
+  {
+    "Id": "59aee5ef-acbb-4203-900d-3d56642a8fda",
+    "Name": "545",
+    "Price": 252.0,
+    "Stock": 1345.0
+  },
+  {
+    "Id": "1a442201-8e33-4969-b9c6-4bcaf618796f",
+    "Name": "64374",
+    "Price": 34563.0,
+    "Stock": 3453.0
+  },
+  {
+    "Id": "bc6762c5-2f13-42db-a6af-0558b872dd81",
+    "Name": "1515",
+    "Price": 446.0,
+    "Stock": 156.0
   }
 ]
