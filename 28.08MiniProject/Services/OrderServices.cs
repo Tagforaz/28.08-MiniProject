@@ -1,15 +1,8 @@
 ﻿using _28._08MiniProject.Models;
 using _28._08MiniProject.Repositories;
 using _28._08MiniProject.Utilities.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace _28._08MiniProject.Services
 {
-
     internal class OrderServices
     {
         public static string path = @"C:\Users\Tagforaz\Desktop\Pb306\28.08MiniProject\28.08MiniProject\Data\Orders.json";
@@ -36,6 +29,8 @@ namespace _28._08MiniProject.Services
             bool addMore;
             do
             {
+                var productServices = new ProductServices();
+                productServices.ShowAllProduct();
                 Console.WriteLine("Enter product Id:");
                 Guid productId;
                 while (!Guid.TryParse(Console.ReadLine(), out productId))
@@ -96,11 +91,8 @@ namespace _28._08MiniProject.Services
             var orders = OrderRepository.Deserialize<Order>(path);
             orders.Add(order);
             OrderRepository.Serialize(orders, path);
-            Console.WriteLine("\nOrder created successfully!");
-            Console.WriteLine($"Order Id: {order.Id}");
-            Console.WriteLine($"Email: {order.Email}");
-            Console.WriteLine($"Status: {order.Status}");
-            Console.WriteLine($"Total: {order.Total}");
+            Console.WriteLine("\nOrder created successfully! ");
+            Console.WriteLine($"Order Id: {order.Id} \nEmail: {order.Email} \nStatus: {order.Status} \nTotal: {order.Total}") ;
         }
         private static bool AskYesNo(string question)
         {
@@ -119,11 +111,7 @@ namespace _28._08MiniProject.Services
             Console.WriteLine("All Orders:\n");
             foreach (var order in orders)
             {
-                Console.WriteLine($"Order Id: {order.Id}");
-                Console.WriteLine($"Email: {order.Email}");
-                Console.WriteLine($"Status: {order.Status}");
-                Console.WriteLine($"Ordered At: {order.OrderedAt}");
-
+                Console.WriteLine($"Order Id: {order.Id} \nEmail: {order.Email} \nStatus: {order.Status} \nOrdered At: {order.OrderedAt} ");
                 Console.WriteLine("Items:");
                 foreach (var item in order.Items)
                 {
@@ -142,6 +130,7 @@ namespace _28._08MiniProject.Services
                 Console.WriteLine("No orders found.");
                 return;
             }
+            ShowAllOrders();
             Console.WriteLine("Enter Order Id:");
             Guid id;
             while (!Guid.TryParse(Console.ReadLine(), out id))
@@ -156,10 +145,9 @@ namespace _28._08MiniProject.Services
                 Console.WriteLine("Order not found.");
                 return;
             }
+            Console.WriteLine($"Current Status:{order.Status}");
             Console.WriteLine("Choose new status:");
-            Console.WriteLine("1) Pending");
-            Console.WriteLine("2) Confirmed");
-            Console.WriteLine("3) Completed");
+            Console.WriteLine("1) Pending \n2) Confirmed \n3) Completed");
             int opt;
             while (!int.TryParse(Console.ReadLine(), out opt) || opt < 1 || opt > 3)
             {

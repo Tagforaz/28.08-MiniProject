@@ -18,7 +18,7 @@
     ],
     "Total": 3400,
     "Email": "ada@af",
-    "Status": 1,
+    "Status": 3,
     "OrderedAt": "2025-08-31T13:42:03.5499274+04:00",
     "Id": "7005b1ca-c68c-44d2-b603-3ed389d8f19d"
   },
@@ -173,5 +173,222 @@
     "Status": 1,
     "OrderedAt": "2025-08-31T14:38:05.9979838+04:00",
     "Id": "908f318b-7418-42e2-b067-13ad6f6ee50c"
+  },
+  {
+    "Items": [
+      {
+        "Products": [
+          {
+            "Id": "1a442201-8e33-4969-b9c6-4bcaf618796f",
+            "Name": "64374",
+            "Price": 34563.0,
+            "Stock": 3473.0
+          }
+        ],
+        "Count": 100.0,
+        "ProductPrice": 34563.0,
+        "SubTotal": 3456300.0,
+        "Id": "0daf5c76-15e6-433b-8474-e1f45247c9fe"
+      },
+      {
+        "Products": [
+          {
+            "Id": "3dbbb2f9-bb50-4741-9822-c2be55988a3e",
+            "Name": "TGDF",
+            "Price": 34.0,
+            "Stock": 30.0
+          }
+        ],
+        "Count": 10.0,
+        "ProductPrice": 34.0,
+        "SubTotal": 340.0,
+        "Id": "9cce0d77-4000-47ad-a3da-516a82d087e0"
+      }
+    ],
+    "Total": 3456640,
+    "Email": "SDF@",
+    "Status": 1,
+    "OrderedAt": "2025-08-31T15:12:09.7163674+04:00",
+    "Id": "552858e7-bbcf-4769-9231-ee27bd2aaa5f"
+  },
+  {
+    "Items": [
+      {
+        "Products": [
+          {
+            "Id": "3dbbb2f9-bb50-4741-9822-c2be55988a3e",
+            "Name": "TGDF",
+            "Price": 34.0,
+            "Stock": 20.0
+          }
+        ],
+        "Count": 10.0,
+        "ProductPrice": 34.0,
+        "SubTotal": 340.0,
+        "Id": "56ec76a3-e8f2-4d25-a726-ae5a945c78ec"
+      },
+      {
+        "Products": [
+          {
+            "Id": "67dc469d-5088-4d42-8114-67923c9eb740",
+            "Name": "AF",
+            "Price": 31.0,
+            "Stock": 231.0
+          }
+        ],
+        "Count": 10.0,
+        "ProductPrice": 31.0,
+        "SubTotal": 310.0,
+        "Id": "9bd0c927-50c7-4da2-bf4b-567a4079faa9"
+      }
+    ],
+    "Total": 650,
+    "Email": "dfg@",
+    "Status": 1,
+    "OrderedAt": "2025-08-31T15:13:07.0175428+04:00",
+    "Id": "e4d2bcd0-ae34-4b01-8f8a-65f8701759f9"
+  },
+  {
+    "Items": [
+      {
+        "Products": [
+          {
+            "Id": "0c900a21-1bdf-499c-acd9-1884bf475aef",
+            "Name": "UYT",
+            "Price": 25.0,
+            "Stock": 2.0
+          }
+        ],
+        "Count": 2.0,
+        "ProductPrice": 25.0,
+        "SubTotal": 50.0,
+        "Id": "63bdeb26-4f12-4af4-895f-225738bc5f77"
+      }
+    ],
+    "Total": 50,
+    "Email": "adfa@",
+    "Status": 1,
+    "OrderedAt": "2025-08-31T15:28:44.4637211+04:00",
+    "Id": "1ea03217-92dd-4147-b7b0-cfd789b93132"
+  },
+  {
+    "Items": [
+      {
+        "Products": [
+          {
+            "Id": "3dbbb2f9-bb50-4741-9822-c2be55988a3e",
+            "Name": "TGDF",
+            "Price": 34.0,
+            "Stock": 15.0
+          }
+        ],
+        "Count": 5.0,
+        "ProductPrice": 34.0,
+        "SubTotal": 170.0,
+        "Id": "3c0145b3-334b-4e36-9789-d7fa2881de98"
+      }
+    ],
+    "Total": 170,
+    "Email": "afaf@",
+    "Status": 1,
+    "OrderedAt": "2025-08-31T15:33:09.858147+04:00",
+    "Id": "9000e8e5-e809-4453-b3b9-30e0eb50115f"
+  },
+  {
+    "Items": [
+      {
+        "Products": [
+          {
+            "Id": "3dbbb2f9-bb50-4741-9822-c2be55988a3e",
+            "Name": "TGDF",
+            "Price": 34.0,
+            "Stock": 10.0
+          }
+        ],
+        "Count": 5.0,
+        "ProductPrice": 34.0,
+        "SubTotal": 170.0,
+        "Id": "b792a778-65d4-4969-96a9-d1ef2b7fd57a"
+      }
+    ],
+    "Total": 170,
+    "Email": "afa2@",
+    "Status": 1,
+    "OrderedAt": "2025-08-31T15:34:01.9223585+04:00",
+    "Id": "afa270ca-f970-4345-a322-9e3bef669e82"
+  },
+  {
+    "Items": [
+      {
+        "Products": [
+          {
+            "Id": "67dc469d-5088-4d42-8114-67923c9eb740",
+            "Name": "AF",
+            "Price": 31.0,
+            "Stock": 221.0
+          }
+        ],
+        "Count": 10.0,
+        "ProductPrice": 31.0,
+        "SubTotal": 310.0,
+        "Id": "96230ebf-5ed5-48c0-846e-bd5e79a47911"
+      },
+      {
+        "Products": [
+          {
+            "Id": "8c0e98b3-9c9d-4678-a90c-342ad7f7164f",
+            "Name": "123",
+            "Price": 214.0,
+            "Stock": 0.0
+          }
+        ],
+        "Count": 1.0,
+        "ProductPrice": 214.0,
+        "SubTotal": 214.0,
+        "Id": "661b1067-ad1c-478a-a840-2a8a4fbf5d91"
+      },
+      {
+        "Products": [
+          {
+            "Id": "f4bb20a0-d5b6-4777-80f1-2a6af0b07ff2",
+            "Name": "FAFA",
+            "Price": 422.0,
+            "Stock": 24240.0
+          }
+        ],
+        "Count": 4.0,
+        "ProductPrice": 422.0,
+        "SubTotal": 1688.0,
+        "Id": "dddff910-da79-4733-9609-92f7f11ccdd6"
+      }
+    ],
+    "Total": 2212,
+    "Email": "@",
+    "Status": 2,
+    "OrderedAt": "2025-08-31T16:32:32.3451162+04:00",
+    "Id": "d198588f-7a5f-4698-9dba-1bf0a359a67b"
+  },
+  {
+    "Items": [
+      {
+        "Products": [
+          {
+            "Id": "77ba7ceb-1d4f-44aa-8382-f88960f516a8",
+            "Name": "LLLL",
+            "Price": 200.0,
+            "Stock": 94.0
+          }
+        ],
+        "Count": 100.0,
+        "ProductPrice": 200.0,
+        "SubTotal": 20000.0,
+        "Id": "fa82f5fd-ea30-479d-ba48-782dbfb69a4f"
+      }
+    ],
+    "Total": 20000,
+    "Email": "afa@",
+    "Status": 1,
+    "OrderedAt": "2025-08-31T17:08:27.2424481+04:00",
+    "Id": "b6b06c4b-e3c7-491b-a719-e80a70c791a8"
   }
 ]

@@ -1,14 +1,5 @@
 ﻿using _28._08MiniProject.Models;
 using _28._08MiniProject.Repositories;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-using System.Xml.Linq;
-
 namespace _28._08MiniProject.Services
 {
     internal class ProductServices
@@ -56,8 +47,6 @@ namespace _28._08MiniProject.Services
             List<Product> products = ReadProduct();
             products.Add(product);
             WriteProduct(products);
-            
-
         }
         public void DeleteProduct()
         {
@@ -86,7 +75,6 @@ namespace _28._08MiniProject.Services
         public void GetProductById()
         {
             Console.WriteLine("Please input product's id for product's info:");
-
             Guid id;
             while (!Guid.TryParse(Console.ReadLine(), out id))
             {
@@ -127,52 +115,56 @@ namespace _28._08MiniProject.Services
                 {
                     stockStatus = "Out of Stock";
                 }
-                Console.WriteLine($"Id: {product.Id}, Product: {product.Name}, Price: {product.Price:C}, {stockStatus}");
+                Console.WriteLine($"Id: {product.Id}, Product: {product.Name}, Price: {product.Price:C},  {stockStatus}");
             }
         }
         public void RefillProduct()
         {
+
             ShowAllProduct();
-            Console.WriteLine("Please input product's id to refill stock:(negative number=>decrease,positive number=>increase)");
+            Console.WriteLine("Please input product's id to refill:");
             Guid id;
             while (!Guid.TryParse(Console.ReadLine(), out id))
             {
                 Console.Clear();
-                Console.WriteLine("Wrong Id. Please enter a valid product ID.");
+                Console.WriteLine("Wrong Id. Please enter a product ID.");
             }
             List<Product> products = ReadProduct();
             var productToRefill = products.FirstOrDefault(p => p.Id == id);
-            if (productToRefill != null)
-            {
-                double refillAmount;
-                do
-                {
-                    Console.WriteLine("Please input the amount to refill:");
-                    string input = Console.ReadLine();
-                    if (!double.TryParse(input, out refillAmount))
-                    {
-                        Console.WriteLine("Please enter a valid number.");
-                        continue;
-                    }
-                    if (productToRefill.Stock + refillAmount < 0)
-                    {
-                        Console.Clear();
-                        Console.WriteLine("Stock must be greater than 0.");
-                    }
-                    else
-                    {
-                        productToRefill.Stock += refillAmount;
-                        WriteProduct(products);
-                        Console.WriteLine($"{productToRefill.Name} stock refilled. New stock: {productToRefill.Stock}");
-                    }
-                } while (productToRefill.Stock + refillAmount < 0); 
-            }
-            else
+            if (productToRefill == null)
             {
                 Console.Clear();
                 Console.WriteLine("Product not found.");
+                return;
             }
-        }     
+            while (true)
+            {
+                Console.WriteLine("Please input the amount to refill (negative => decrease, positive => increase):");
+                string input = Console.ReadLine();
+                if (!double.TryParse(input, out double refillAmount))
+                {
+                    Console.Clear();
+                    Console.WriteLine("Please input a number.");
+                    continue; 
+                }
+                if (refillAmount == 0)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Input cant be 0.Try again");
+                    continue; 
+                }
+                if (productToRefill.Stock + refillAmount < 0)
+                {
+                    Console.Clear();
+                    Console.WriteLine($"Stock cannot be negative. Current stock: {productToRefill.Stock}");
+                    continue; 
+                }
+                productToRefill.Stock += refillAmount;
+                WriteProduct(products);
+                Console.WriteLine($"{productToRefill.Name} stock updated. New stock: {productToRefill.Stock}");
+                break;
+            }
+        }
         public static List<Product> ReadProduct()
         {
             return new Repository().Deserialize<Product>(path);

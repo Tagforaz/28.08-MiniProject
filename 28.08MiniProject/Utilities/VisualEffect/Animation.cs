@@ -8,102 +8,133 @@ namespace _28._08MiniProject.Utilities.VisualEffect
 {
     internal static class Animation
     {
-        public static void PrintAsciiArt()
+        public static void Run()
         {
-            string[] art =
-            {
-                @"____________  _____  _____  ____         _____ _                 ",
-                @"| ___ \ ___ \|____ ||  _  |/ ___|       /  ___| |                ",
-                @"| |_/ / |_/ /    / /| |/' / /___        \ `--.| |_ ___  _ __ ___ ",
-                @"|  __/| ___ \    \ \|  /| | ___ \        `--. \ __/ _ \| '__/ _ \",
-                @"| |   | |_/ /.___/ /\ |_/ / \_/ |       /\__/ / || (_) | | |  __/",
-                @"\_|   \____/ \____/  \___/\_____/       \____/ \__\___/|_|  \___|",
-                @"                                                                 ",
-                @"                                                                 "
-            };
+            Console.Clear();
+            Console.CursorVisible = false;
+            var prevColor = Console.ForegroundColor;
 
+           
+            TwinkleStarsFullScreen(durationMs: 1500);
+
+           
+            Console.Clear();
+            BigTitlePB306();
+
+         
+            TypeLine("loading your datas...", ConsoleColor.DarkGray, 14);
+            ProgressBar(steps: 34, totalMs: 1200);
+
+            Console.ForegroundColor = prevColor;
+            Console.CursorVisible = true;
+            Console.Clear();
+        }
+
+      
+        private static void BigTitlePB306()
+        {
+            
+            string[] lines =
+{
+    "PPPP   BBBB    3333    000   6666   SSSS   TTTTTT   OOOO   RRRR   EEEEE ",
+    "P   P  B   B  3    3  0   0 6      S    S    TT    O    O  R   R  E     ",
+    "P   P  B   B       3  0   0 6      S         TT    O    O  R   R  E     ",
+    "PPPP   BBBB     333   0   0 6666    SSS      TT    O    O  RRRR   EEEE  ",
+    "P      B   B       3  0   0 6   6       S    TT    O    O  R R    E     ",
+    "P      B   B  3    3  0   0 6   6  S    S    TT    O    O  R  R   E     ",
+    "P      BBBB    3333    000   666   SSSS     TT      OOOO   R   R  EEEEE ",
+};
+
+            int w = SafeWidth();
             Console.ForegroundColor = ConsoleColor.Cyan;
-            foreach (var line in art)
-            {
-                Console.WriteLine(line);
-                Thread.Sleep(100);
-            }
+            Console.WriteLine(); 
+            foreach (var line in lines)
+                WriteCentered(line, w);
+
             Console.ResetColor();
             Console.WriteLine();
         }
 
-        public static void GradientText(string text, int startColor, int endColor)
+
+        private static void TwinkleStarsFullScreen(int durationMs)
         {
-            int length = text.Length;
-            for (int i = 0; i < length; i++)
+            var rnd = new Random();
+            int w = SafeWidth();
+            int h = SafeHeight();
+
+           
+            int starCount = Math.Clamp((w * h) / 20, 150, 1200);
+            ConsoleColor[] starColors = { ConsoleColor.Cyan, ConsoleColor.Yellow };
+            var end = DateTime.Now.AddMilliseconds(durationMs);
+
+            while (DateTime.Now < end)
             {
-                int colorIndex = startColor + (i * (endColor - startColor)) / Math.Max(length, 1);
-                int idx = Math.Clamp(colorIndex, 0, 15);
-                Console.ForegroundColor = (ConsoleColor)idx;
-                Console.Write(text[i]);
+                for (int i = 0; i < starCount; i++)
+                {
+                    int x = rnd.Next(0, Math.Max(w - 1, 1));
+                    int y = rnd.Next(0, Math.Max(h - 1, 1));
+                    try
+                    {
+                        Console.SetCursorPosition(x, y);
+                        Console.ForegroundColor = starColors[rnd.Next(starColors.Length)];
+                        Console.Write('*');
+                    }
+                    catch { /* pəncərə ölçüsü dəyişə bilər */ }
+                }
+                Thread.Sleep(70);
+            }
+
+            Console.ResetColor();
+        }
+
+        private static void TypeLine(string text, ConsoleColor color, int delayMs)
+        {
+            Console.ForegroundColor = color;
+            foreach (var ch in text)
+            {
+                Console.Write(ch);
+                Thread.Sleep(delayMs);
             }
             Console.ResetColor();
             Console.WriteLine("\n");
         }
 
-        public static void LoadingBar()
+        private static void ProgressBar(int steps, int totalMs)
         {
-            Console.WriteLine("Loading...");
+            int barWidth = Math.Clamp(SafeWidth() - 12, 10, 50);
+            int delay = Math.Max(totalMs / steps, 1);
+
             Console.ForegroundColor = ConsoleColor.Green;
-
-            for (int i = 0; i <= 20; i++)
-            {
-                Console.Write($"\r[{new string('=', i)}{new string(' ', 20 - i)}] {i * 5}%   ");
-                try { Console.Beep(500 + i * 20, 50); } catch { }
-                Thread.Sleep(100);
-            }
-
+            Console.Write("Loading ");
             Console.ResetColor();
-            Console.WriteLine("\nDownloading compleated!\n");
+
+            for (int i = 0; i <= steps; i++)
+            {
+                int filled = (int)Math.Round((double)i / steps * barWidth);
+                string bar = "[" + new string('=', filled) + new string(' ', barWidth - filled) + $"] {(i * 100 / steps),3}%";
+                Console.Write("\r" + bar);
+                Thread.Sleep(delay);
+            }
+            Console.WriteLine();
         }
 
-        public static void Spinner(int durationMs)
+        private static void WriteCentered(string text, int windowWidth)
         {
-            Console.Write("Loading");
-            char[] symbols = { '|', '/', '-', '\\' };
-            DateTime end = DateTime.Now.AddMilliseconds(durationMs);
-            int i = 0;
-
-            while (DateTime.Now < end)
-            {
-                Console.Write(symbols[i++ % symbols.Length]);
-                Console.SetCursorPosition(Math.Max(Console.CursorLeft - 1, 0), Console.CursorTop);
-                Thread.Sleep(100);
-            }
-            Console.WriteLine("✔");
+            int left = Math.Max((windowWidth - text.Length) / 2, 0);
+            try { Console.SetCursorPosition(left, Console.CursorTop); } catch { }
+            Console.WriteLine(text);
         }
 
-        public static void MatrixEffect(int rows, int cycles)
+        private static int SafeWidth()
         {
-            Random rand = new Random();
-            Console.ForegroundColor = ConsoleColor.Green;
+            try { return Math.Max(Console.WindowWidth, 40); }
+            catch { return 80; }
+        }
 
-            for (int c = 0; c < cycles; c++)
-            {
-                int w = Math.Max(Console.WindowWidth - 1, 1);
-                int h = Math.Max(Console.WindowHeight - 1, 1);
-
-                for (int i = 0; i < rows; i++)
-                {
-                    int x = rand.Next(w);
-                    int y = rand.Next(h);
-                    try
-                    {
-                        Console.SetCursorPosition(x, y);
-                        Console.Write(rand.Next(0, 2));
-                    }
-                    catch { }
-                }
-                Thread.Sleep(100);
-            }
-
-            Console.ResetColor();
-            Console.Clear();
+        private static int SafeHeight()
+        {
+            try { return Math.Max(Console.WindowHeight, 20); }
+            catch { return 25; }
         }
     }
 }

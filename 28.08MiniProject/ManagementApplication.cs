@@ -24,7 +24,7 @@ namespace _28._08MiniProject
             while (!(num == 0 && result))
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("1.Create Product\n2.Delete Product\n3.Get Product By Id\n4.Show All Product\n5.Refill Product\n6.Order Product\n7.Show All Orders\n8.Charge Order Status\n\n0.Quit");
+                Console.WriteLine("1.Create Product\n2.Delete Product\n3.Get Product By Id\n4.Show All Product\n5.Refill Product\n6.Order Product\n7.Show All Orders\n8.Change Order Status\n\n0.Quit");
                 str = Console.ReadLine();
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.Clear();
