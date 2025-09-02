@@ -390,5 +390,97 @@
     "Status": 1,
     "OrderedAt": "2025-08-31T17:08:27.2424481+04:00",
     "Id": "b6b06c4b-e3c7-491b-a719-e80a70c791a8"
+  },
+  {
+    "Items": [
+      {
+        "Products": [
+          {
+            "Id": "786d3a7f-dda8-4916-aed9-e43cd1f5ee3f",
+            "Name": "FAF",
+            "Price": 3.0,
+            "Stock": 1.0
+          }
+        ],
+        "Count": 1.0,
+        "ProductPrice": 3.0,
+        "SubTotal": 3.0,
+        "Id": "9426dd19-a13f-4d28-9224-aff7a2961b8c"
+      }
+    ],
+    "Total": 3,
+    "Email": "fa@",
+    "Status": 1,
+    "OrderedAt": "2025-09-01T16:20:52.9347323+04:00",
+    "Id": "60a22236-f7e9-4357-a54c-c034d508df9a"
+  },
+  {
+    "Items": [
+      {
+        "Products": [
+          {
+            "Id": "786d3a7f-dda8-4916-aed9-e43cd1f5ee3f",
+            "Name": "FAF",
+            "Price": 3.0,
+            "Stock": 0.0
+          }
+        ],
+        "Count": 1.0,
+        "ProductPrice": 3.0,
+        "SubTotal": 3.0,
+        "Id": "fe6be3f0-47dd-4272-9f6a-7a7a2f0767fb"
+      }
+    ],
+    "Total": 3,
+    "Email": "afaf@",
+    "Status": 2,
+    "OrderedAt": "2025-09-01T16:25:09.7947599+04:00",
+    "Id": "1cea8787-ae75-4b3c-8909-3d5fa5a7fc76"
+  },
+  {
+    "Items": [
+      {
+        "Products": [
+          {
+            "Id": "5d67bf50-ed85-4805-8a2b-f29e1e5095dd",
+            "Name": "AS",
+            "Price": 2.0,
+            "Stock": 0.0
+          }
+        ],
+        "Count": 4.0,
+        "ProductPrice": 2.0,
+        "SubTotal": 8.0,
+        "Id": "32fc9d50-af82-4c6e-a98c-c711902f7ecd"
+      }
+    ],
+    "Total": 8,
+    "Email": "AF@",
+    "Status": 2,
+    "OrderedAt": "2025-09-01T16:46:38.1702024+04:00",
+    "Id": "d02cd89c-6ce2-4cd3-8be8-3efee00e997b"
+  },
+  {
+    "Items": [
+      {
+        "Products": [
+          {
+            "Id": "b5ae2993-3d4b-4851-881c-3c30ed910941",
+            "Name": "A",
+            "Price": 3.0,
+            "Stock": 2.0
+          }
+        ],
+        "Count": 1.0,
+        "ProductPrice": 3.0,
+        "SubTotal": 3.0,
+        "Id": "ae1c165f-24a7-4ece-b024-9c15aaa321b1"
+      }
+    ],
+    "Total": 3,
+    "Email": "af@",
+    "Status": 3,
+    "OrderedAt": "2025-09-01T16:57:24.6887058+04:00",
+    "Id": "f8ac3cd6-d0a1-4fca-a1b3-6f056a72c9f2"
   }
 ]

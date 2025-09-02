@@ -9,70 +9,100 @@ namespace _28._08MiniProject.Services
         public Repository OrderRepository { get; set; } = new Repository();
         public void CreateOrder()
         {
-            Console.WriteLine("Enter buyer email (must contain '@'):");
-            string email;
-            while (true)
-            {
-                email = (Console.ReadLine() ?? "").Trim();
-                if (!string.IsNullOrEmpty(email) && email.Contains("@")) break;
-                Console.Clear();
-                Console.WriteLine("Wrong email.Input again:");
-            }
+            Console.WriteLine("ORDER MENU");
             var products = ProductServices.ReadProduct();
             if (products.Count == 0)
             {
-                Console.Clear();
                 Console.WriteLine("There are no products to order.");
                 return;
             }
+            string email = "";
             var orderItems = new List<OrderItem>();
-            bool addMore;
-            do
+            int step = 0;
+            Product? chosen = null;
+            Guid productId = Guid.Empty;
+            double count = 0;
+            bool ordering = true;
+            while (ordering)
             {
-                var productServices = new ProductServices();
-                productServices.ShowAllProduct();
-                Console.WriteLine("Enter product Id:");
-                Guid productId;
-                while (!Guid.TryParse(Console.ReadLine(), out productId))
+                if (step == 0)
                 {
-                    Console.Clear();
-                    Console.WriteLine("Wrong Id.Input again:");
+                    Console.WriteLine("Write 'menu' = back to menu \nEnter user email: (must contain '@')  ");
+                    var input = Console.ReadLine()?.Trim() ?? "";
+                    if (input.Equals("menu", StringComparison.OrdinalIgnoreCase)) return;
+                    if (!string.IsNullOrWhiteSpace(input) && input.Contains("@"))
+                    {
+                        email = input;
+                        step = 1;
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Wrong email. Try again.");
+                    }
                 }
-                var product = products.FirstOrDefault(p => p.Id == productId);
-                if (product == null)
+                else if (step == 1)
                 {
+                    Console.WriteLine(new string('-', 80));
+                    new ProductServices().ShowAllProduct();
+                    Console.WriteLine(new string('-', 80));
+                    Console.WriteLine("Write 'back' = back to email, 'menu' = back to menu\nEnter product Id:  ");
+                    var input = Console.ReadLine()?.Trim() ?? "";
+                    if (input.Equals("menu", StringComparison.OrdinalIgnoreCase)) return;
+                    if (input.Equals("back", StringComparison.OrdinalIgnoreCase)) { step = 0; continue; }
+                    if (!Guid.TryParse(input, out productId))
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Wrong Id. Try again.");
+                        continue;
+                    }
+                    chosen = products.FirstOrDefault(p => p.Id == productId);
                     Console.Clear();
-                    Console.WriteLine("Product not found.");
-                    addMore = AskYesNo("Add another product? (y/n): ");
-                    continue;
-                }
-                Console.WriteLine($"How many '{product.Name}'? In stock: {product.Stock}");
-                double count;
-                while (!double.TryParse(Console.ReadLine(), out count) || count <= 0)
-                {
-                    Console.Clear();
-                    Console.WriteLine("Count must be positive. Try again:");
-                }
-                if (count > product.Stock)
-                {
-                    Console.Clear();
-                    Console.WriteLine("Not enough stock.");
+                    if (chosen == null) { Console.WriteLine("Product not found."); continue; }
+                    if (chosen.Stock <= 0) { Console.WriteLine("Selected product is out of stock."); continue; }
+                    step = 2;
                 }
                 else
                 {
-                    product.Stock -= count;
-                    var oi = new OrderItem
+                    Console.WriteLine($"Write 'back' = back to product, 'menu' = back to menu\nHow many '{chosen!.Name}'? In stock: {chosen.Stock} ");
+                    var input = Console.ReadLine()?.Trim() ?? "";
+                    if (input.Equals("menu", StringComparison.OrdinalIgnoreCase)) return;
+                    if (input.Equals("back", StringComparison.OrdinalIgnoreCase)) { step = 1; continue; }
+                    if (!double.TryParse(input, out count) || count <= 0)
                     {
-                        Products = new List<Product> { product },
+                        Console.Clear();
+                        Console.WriteLine("Count must be positive.");
+                        continue;
+                    }
+                    if (count > chosen.Stock)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Not enough stock.");
+                        continue;
+                    }
+                    chosen.Stock -= count;
+                    orderItems.Add(new OrderItem
+                    {
+                        Products = new List<Product> { chosen },
                         Count = count,
-                        ProductPrice = product.Price,
-                        SubTotal = product.Price * (decimal)count
-                    };
-                    orderItems.Add(oi);
-                    Console.WriteLine($"Added: {product.Name} x {count}");
+                        ProductPrice = chosen.Price,
+                        SubTotal = chosen.Price * (decimal)count
+                    });
+                    Console.WriteLine($"Added: {chosen.Name} x {count}");
+                    bool addMore = AskYesNo("Add another product? (y/n): ");
+                    if (addMore)
+                    {
+                        step = 1;
+                        chosen = null;
+                        productId = Guid.Empty;
+                        count = 0;
+                    }
+                    else
+                    {
+                        ordering = false;
+                    }
                 }
-                addMore = AskYesNo("Add another product? (y/n): ");
-            } while (addMore);
+            }
             if (orderItems.Count == 0)
             {
                 Console.Clear();
@@ -91,8 +121,8 @@ namespace _28._08MiniProject.Services
             var orders = OrderRepository.Deserialize<Order>(path);
             orders.Add(order);
             OrderRepository.Serialize(orders, path);
-            Console.WriteLine("\nOrder created successfully! ");
-            Console.WriteLine($"Order Id: {order.Id} \nEmail: {order.Email} \nStatus: {order.Status} \nTotal: {order.Total}") ;
+            Console.WriteLine("\nOrder created successfully!");
+            Console.WriteLine($"Order Id: {order.Id}\nEmail: {order.Email}\nStatus: {order.Status}\nTotal: {order.Total}");
         }
         private static bool AskYesNo(string question)
         {
@@ -102,6 +132,7 @@ namespace _28._08MiniProject.Services
         }
         public void ShowAllOrders()
         {
+            Console.WriteLine("ORDER MENU");
             var orders = OrderRepository.Deserialize<Order>(path);
             if (orders.Count == 0)
             {
@@ -115,7 +146,7 @@ namespace _28._08MiniProject.Services
                 Console.WriteLine("Items:");
                 foreach (var item in order.Items)
                 {
-                    Console.WriteLine($"   - {item.Products.First().Name} x {item.Count} @ {item.ProductPrice:C} = {item.SubTotal:C}");
+                    Console.WriteLine($" - {item.Products.First().Name} x {item.Count} @ {item.ProductPrice:C} = {item.SubTotal:C}");
                 }
                 Console.WriteLine($"TOTAL: {order.Total}");
                 Console.WriteLine(new string('-', 45));
@@ -130,33 +161,80 @@ namespace _28._08MiniProject.Services
                 Console.WriteLine("No orders found.");
                 return;
             }
-            ShowAllOrders();
-            Console.WriteLine("Enter Order Id:");
-            Guid id;
-            while (!Guid.TryParse(Console.ReadLine(), out id))
+            int step = 0;
+            Guid orderId = Guid.Empty;
+            Order? order = null;
+            var statuses = Enum.GetValues(typeof(OrderStatus)).Cast<OrderStatus>().ToList();
+            string? error = null;
+            string? statusError = null;
+            while (true)
             {
-                Console.Clear();
-                Console.WriteLine("Wrong Id.Input again:");
+                if (step == 0)
+                {
+                    Console.Clear();
+                    Console.WriteLine(new string('-', 80));
+                    ShowAllOrders();
+                    Console.WriteLine(new string('-', 80));
+                    if (!string.IsNullOrEmpty(error))
+                    {
+                        Console.WriteLine(error);
+                        error = null;
+                    }
+                    Console.Write("Write 'menu' for back to menu.\nInput Order Id: ");
+                    var input = Console.ReadLine()?.Trim() ?? "";
+                    if (input.Equals("menu", StringComparison.OrdinalIgnoreCase)) return;
+                    if (string.IsNullOrWhiteSpace(input))
+                    {
+                        error = "Id can't be empty.Input again.";
+                        continue;
+                    }
+                    if (!Guid.TryParse(input, out orderId))
+                    {
+                        error = "Wrong Id.Input again.";
+                        continue;
+                    }
+                    order = orders.FirstOrDefault(o => o.Id == orderId);
+                    if (order == null)
+                    {
+                        error = "Order not found.Input again.";
+                        continue;
+                    }
+                    step = 1;
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine($"Order: {order!.Id}");
+                    Console.WriteLine($"Current Status: {order.Status}");
+                    Console.WriteLine("Write 'back' for back, 'menu' for back to menu\nChoose new status:");
+                    for (int i = 0; i < statuses.Count; i++)
+                        Console.WriteLine($"{i + 1}) {statuses[i]}");
+                    if (!string.IsNullOrEmpty(statusError))
+                    {
+                        Console.WriteLine(statusError);
+                        statusError = null;
+                    }
+                    var input = Console.ReadLine()?.Trim() ?? "";
+                    if (input.Equals("menu", StringComparison.OrdinalIgnoreCase)) return;
+                    if (input.Equals("back", StringComparison.OrdinalIgnoreCase)) { step = 0; continue; }
+
+                    if (!int.TryParse(input, out int opt) || opt < 1 || opt > statuses.Count)
+                    {
+                        statusError = "Wrong option.Please select a number from the list.";
+                        continue;
+                    }
+                    var newStatus = statuses[opt - 1];
+                    if (newStatus == order.Status)
+                    {
+                        statusError = $"Order is already in '{order.Status}' status. Choose another.";
+                        continue;
+                    }
+                    order.Status = newStatus;
+                    OrderRepository.Serialize(orders, path);
+                    Console.WriteLine($"Order status updated to {order.Status}.");
+                    break;
+                }
             }
-            var order = orders.FirstOrDefault(o => o.Id == id);
-            if (order == null)
-            {
-                Console.Clear();
-                Console.WriteLine("Order not found.");
-                return;
-            }
-            Console.WriteLine($"Current Status:{order.Status}");
-            Console.WriteLine("Choose new status:");
-            Console.WriteLine("1) Pending \n2) Confirmed \n3) Completed");
-            int opt;
-            while (!int.TryParse(Console.ReadLine(), out opt) || opt < 1 || opt > 3)
-            {
-                Console.Clear();
-                Console.WriteLine("Wrong option. Enter 1, 2 or 3:");
-            }
-            order.Status = (Utilities.Enums.OrderStatus)opt;
-            OrderRepository.Serialize(orders, path);
-            Console.WriteLine($"Order status updated to {order.Status}.");
         }
     }
 }

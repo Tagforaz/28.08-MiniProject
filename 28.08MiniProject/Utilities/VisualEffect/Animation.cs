@@ -36,13 +36,13 @@ namespace _28._08MiniProject.Utilities.VisualEffect
             
             string[] lines =
 {
-    "PPPP   BBBB    3333    000   6666   SSSS   TTTTTT   OOOO   RRRR   EEEEE ",
-    "P   P  B   B  3    3  0   0 6      S    S    TT    O    O  R   R  E     ",
-    "P   P  B   B       3  0   0 6      S         TT    O    O  R   R  E     ",
-    "PPPP   BBBB     333   0   0 6666    SSS      TT    O    O  RRRR   EEEE  ",
-    "P      B   B       3  0   0 6   6       S    TT    O    O  R R    E     ",
-    "P      B   B  3    3  0   0 6   6  S    S    TT    O    O  R  R   E     ",
-    "P      BBBB    3333    000   666   SSSS     TT      OOOO   R   R  EEEEE ",
+    "PPPP   BBBB    3333    000   6666         SSSS   TTTTTT   OOOO   RRRR   EEEEE ",
+    "P   P  B   B  3    3  0   0 6            S    S    TT    O    O  R   R  E     ",
+    "P   P  B   B       3  0   0 6            S         TT    O    O  R   R  E     ",
+    "PPPP   BBBB     333   0   0 6666          SSS      TT    O    O  RRRR   EEEE  ",
+    "P      B   B       3  0   0 6   6             S    TT    O    O  R R    E     ",
+    "P      B   B  3    3  0   0 6   6        S    S    TT    O    O  R  R   E     ",
+    "P      BBBB    3333    000   666         SSSS     TT      OOOO   R   R  EEEEE ",
 };
 
             int w = SafeWidth();

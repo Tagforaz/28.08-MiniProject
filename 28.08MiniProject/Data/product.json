@@ -1,21 +1,9 @@
 [
   {
-    "Id": "3dbbb2f9-bb50-4741-9822-c2be55988a3e",
-    "Name": "TGDF",
-    "Price": 34.0,
-    "Stock": 130.0
-  },
-  {
-    "Id": "67dc469d-5088-4d42-8114-67923c9eb740",
-    "Name": "AF",
-    "Price": 31.0,
-    "Stock": 221.0
-  },
-  {
     "Id": "8a3e1c15-30fd-41e2-aa94-8b6f0eac7a42",
     "Name": "141",
     "Price": 141.0,
-    "Stock": 381.0
+    "Stock": 562.0
   },
   {
     "Id": "8c0e98b3-9c9d-4678-a90c-342ad7f7164f",
@@ -76,5 +64,29 @@
     "Name": "LLLL",
     "Price": 200.0,
     "Stock": 94.0
+  },
+  {
+    "Id": "73a449da-6ad8-4579-a0e6-4540a3c4a432",
+    "Name": "ADA",
+    "Price": 4.0,
+    "Stock": 1.0
+  },
+  {
+    "Id": "d89bbf6f-1e10-4a29-bc38-b1ae820ae057",
+    "Name": "DAA",
+    "Price": 2.0,
+    "Stock": 32.0
+  },
+  {
+    "Id": "98f0c35d-cd89-4c7a-9511-7a82860d4116",
+    "Name": "A",
+    "Price": 3.0,
+    "Stock": 3.0
+  },
+  {
+    "Id": "8af33723-ba15-4f5c-bd5e-20ca7b879be5",
+    "Name": "AFAF",
+    "Price": 1.0,
+    "Stock": 0.0
   }
 ]
