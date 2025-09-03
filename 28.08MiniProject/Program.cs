@@ -9,7 +9,6 @@ namespace _28._08MiniProject
     {
         static void Main(string[] args)
         {
-
             Animation.Run();
             var app = new ManagementApplication();
             app.Run();

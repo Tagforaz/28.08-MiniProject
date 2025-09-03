@@ -14,15 +14,15 @@ namespace _28._08MiniProject.Utilities.VisualEffect
             Console.CursorVisible = false;
             var prevColor = Console.ForegroundColor;
 
-           
-            TwinkleStarsFullScreen(durationMs: 1500);
 
-           
+            MatrixRain(durationMs: 3000);
+
+
             Console.Clear();
             BigTitlePB306();
 
          
-            TypeLine("loading your datas...", ConsoleColor.DarkGray, 14);
+            TypeLine("loading your datas...", ConsoleColor.Green, 14);
             ProgressBar(steps: 34, totalMs: 1200);
 
             Console.ForegroundColor = prevColor;
@@ -46,44 +46,47 @@ namespace _28._08MiniProject.Utilities.VisualEffect
 };
 
             int w = SafeWidth();
-            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(); 
             foreach (var line in lines)
                 WriteCentered(line, w);
 
-            Console.ResetColor();
             Console.WriteLine();
         }
 
 
-        private static void TwinkleStarsFullScreen(int durationMs)
+        private static void MatrixRain(int durationMs)
         {
             var rnd = new Random();
             int w = SafeWidth();
             int h = SafeHeight();
 
-           
-            int starCount = Math.Clamp((w * h) / 20, 150, 1200);
-            ConsoleColor[] starColors = { ConsoleColor.Cyan, ConsoleColor.Yellow };
+         
+            int[] drops = new int[w];
+            for (int i = 0; i < w; i++)
+                drops[i] = rnd.Next(h);
+
             var end = DateTime.Now.AddMilliseconds(durationMs);
 
+            Console.ForegroundColor = ConsoleColor.Green;
             while (DateTime.Now < end)
             {
-                for (int i = 0; i < starCount; i++)
+                for (int i = 0; i < w; i++)
                 {
-                    int x = rnd.Next(0, Math.Max(w - 1, 1));
-                    int y = rnd.Next(0, Math.Max(h - 1, 1));
+                    
+                    int y = drops[i];
                     try
                     {
-                        Console.SetCursorPosition(x, y);
-                        Console.ForegroundColor = starColors[rnd.Next(starColors.Length)];
-                        Console.Write('*');
+                        Console.SetCursorPosition(i, y);
+                        Console.Write(rnd.Next(2) == 0 ? '0' : '1');
                     }
-                    catch { /* pəncərə ölçüsü dəyişə bilər */ }
-                }
-                Thread.Sleep(70);
-            }
+                    catch {  }
 
+                   
+                    drops[i] = (y + 1) % h;
+                }
+                Thread.Sleep(50); 
+            }
             Console.ResetColor();
         }
 
@@ -106,7 +109,7 @@ namespace _28._08MiniProject.Utilities.VisualEffect
 
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("Loading ");
-            Console.ResetColor();
+            
 
             for (int i = 0; i <= steps; i++)
             {
@@ -117,6 +120,7 @@ namespace _28._08MiniProject.Utilities.VisualEffect
             }
             Console.WriteLine();
         }
+
 
         private static void WriteCentered(string text, int windowWidth)
         {
@@ -136,5 +140,26 @@ namespace _28._08MiniProject.Utilities.VisualEffect
             try { return Math.Max(Console.WindowHeight, 20); }
             catch { return 25; }
         }
+
+
+        public static void PrintMenuAnimated(string[] lines, int charDelayMs = 15, int lineDelayMs = 60)
+        {
+            Console.Clear();
+            ConsoleTheme.SetMainMenu();
+
+            foreach (var line in lines)
+            {
+                foreach (var ch in line)
+                {
+                    Console.Write(ch);
+                    System.Threading.Thread.Sleep(charDelayMs);
+                }
+                Console.WriteLine();
+                System.Threading.Thread.Sleep(lineDelayMs);
+            }
+
+            ConsoleTheme.Reset(); 
+        }
     }
 }
+

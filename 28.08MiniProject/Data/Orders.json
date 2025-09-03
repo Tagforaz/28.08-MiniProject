@@ -410,7 +410,7 @@
     ],
     "Total": 3,
     "Email": "fa@",
-    "Status": 1,
+    "Status": 4,
     "OrderedAt": "2025-09-01T16:20:52.9347323+04:00",
     "Id": "60a22236-f7e9-4357-a54c-c034d508df9a"
   },
@@ -479,8 +479,91 @@
     ],
     "Total": 3,
     "Email": "af@",
-    "Status": 3,
+    "Status": 5,
     "OrderedAt": "2025-09-01T16:57:24.6887058+04:00",
     "Id": "f8ac3cd6-d0a1-4fca-a1b3-6f056a72c9f2"
+  },
+  {
+    "Items": [
+      {
+        "Products": [
+          {
+            "Id": "e52e36c2-e4a5-4513-9848-cc31dcc36e3b",
+            "Name": "HGHDH",
+            "Price": 747.0,
+            "Stock": 76776.0
+          }
+        ],
+        "Count": 232.0,
+        "ProductPrice": 747.0,
+        "SubTotal": 173304.0,
+        "Id": "5bba2e3d-3396-4898-8ccf-72b842ef661f"
+      }
+    ],
+    "Total": 173304,
+    "Email": "faa@",
+    "Status": 4,
+    "OrderedAt": "2025-09-03T08:33:18.6145357+04:00",
+    "Id": "7bc936d8-68ba-47d2-8588-1a1678f1aaad"
+  },
+  {
+    "Items": [
+      {
+        "Products": [
+          {
+            "Id": "e52e36c2-e4a5-4513-9848-cc31dcc36e3b",
+            "Name": "HGHDH",
+            "Price": 747.0,
+            "Stock": 76745.0
+          }
+        ],
+        "Count": 31.0,
+        "ProductPrice": 747.0,
+        "SubTotal": 23157.0,
+        "Id": "c645868e-24ed-410c-bfde-7310e2eb27a9"
+      }
+    ],
+    "Total": 23157,
+    "Email": "af@",
+    "Status": 1,
+    "OrderedAt": "2025-09-03T08:34:26.1559023+04:00",
+    "Id": "f6a58bda-a6fc-4815-91d9-7ade75fc583a"
+  },
+  {
+    "Items": [
+      {
+        "Products": [
+          {
+            "Id": "e52e36c2-e4a5-4513-9848-cc31dcc36e3b",
+            "Name": "HGHDH",
+            "Price": 747.0,
+            "Stock": 76530.0
+          }
+        ],
+        "Count": 23.0,
+        "ProductPrice": 747.0,
+        "SubTotal": 17181.0,
+        "Id": "0ceba1e4-b34f-4e1e-8307-84719bd0572d"
+      },
+      {
+        "Products": [
+          {
+            "Id": "e52e36c2-e4a5-4513-9848-cc31dcc36e3b",
+            "Name": "HGHDH",
+            "Price": 747.0,
+            "Stock": 76530.0
+          }
+        ],
+        "Count": 224.0,
+        "ProductPrice": 747.0,
+        "SubTotal": 167328.0,
+        "Id": "308b952c-8fbd-4ea4-99f9-fd54d8759fd4"
+      }
+    ],
+    "Total": 184509,
+    "Email": "@",
+    "Status": 1,
+    "OrderedAt": "2025-09-03T08:35:23.2338921+04:00",
+    "Id": "f0fd8857-e5a7-4468-a504-f2b40b585bd7"
   }
 ]

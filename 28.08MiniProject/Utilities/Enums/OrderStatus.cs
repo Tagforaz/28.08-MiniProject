@@ -11,6 +11,8 @@ namespace _28._08MiniProject.Utilities.Enums
     {
         Pending =1 ,
         Confirmed = 2,
-        Completed= 3
+        Completed= 3 ,
+        Cancelled = 4 ,
+        Returned = 5 
     }
 }
