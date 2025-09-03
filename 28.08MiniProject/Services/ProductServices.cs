@@ -109,7 +109,7 @@ namespace _28._08MiniProject.Services
                 {
                     if (step == 0)
                     {
-                        Console.WriteLine("PRODUCT MENU");
+                        
                         Console.WriteLine(new string('-', 80));
                         ShowAllProduct(false);
                         Console.WriteLine(new string('-', 80));
@@ -196,37 +196,45 @@ namespace _28._08MiniProject.Services
         }
         public void ShowAllProduct(bool pause = true)
         {
-            ConsoleTheme.SetSubmenu();
+            ConsoleTheme.SetSubmenu(); 
             try
             {
                 Console.WriteLine("PRODUCT MENU");
-
                 var products = ReadProduct();
                 if (products.Count == 0)
                 {
-                    ConsoleTheme.WriteError("You have no product.");
+                    ConsoleTheme.WriteError("You have not any product.");
                     return;
                 }
-                Console.WriteLine("All Product's Info:");
-                foreach (var product in products)
-                {
-                    string stockStatus = product.Stock > 0
-                        ? $"Stock: {product.Stock}"
-                        : "Out of Stock";  
-                    Console.WriteLine(
-                        $"Id: {product.Id}, Product: {product.Name}, Price: {product.Price:C}, {stockStatus}"
-                    );
-                    Console.WriteLine(new string('-', 80));
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Id                                   | Name                | Price     | Stock/Status");
+                Console.WriteLine(new string('-', 80));
+                Console.ResetColor();
+                foreach (var p in products)
+                { 
+                    if (p.Stock > 0)
+                    {
+                        Console.WriteLine(
+                            $"{p.Id} | {p.Name,-19} | " +
+                            $"{p.Price,8:C} | " +
+                            $"Stock: {p.Stock}"
+                        );
+                    }
+                    else
+                    {
+                        Console.Write(
+                            $"{p.Id} | {p.Name,-19} | {p.Price,8:C} | "
+                        );
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Out of Stock");
+                        Console.ResetColor();
+                    }
                 }
-                if (pause)
-                {
-                    Console.WriteLine("\nPress any key to continue...");
-                    Console.ReadKey();
-                }
+                if (pause) Console.ReadKey();
             }
             finally
             {
-                ConsoleTheme.Reset();
+                ConsoleTheme.Reset(); 
             }
         }
         public void RefillProduct()

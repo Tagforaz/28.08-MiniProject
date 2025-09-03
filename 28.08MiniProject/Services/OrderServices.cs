@@ -178,21 +178,43 @@ namespace _28._08MiniProject.Services
                     ConsoleTheme.WriteError("No orders found.");
                     return;
                 }
-                Console.WriteLine("All Orders:\n");
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Order Id                             | Email              | Status     | Ordered At         | Total");
+                Console.WriteLine(new string('-', 100));
+                Console.ResetColor();
                 foreach (var order in orders)
                 {
-                    Console.WriteLine($"Order Id: {order.Id}");
-                    Console.WriteLine($"Email: {order.Email}");
-                    Console.WriteLine($"Status: {order.Status}");
-                    Console.WriteLine($"Ordered At: {order.OrderedAt}");
-                    Console.WriteLine("Items:");
+                    Console.Write($"{order.Id} | {order.Email,-18} | ");
+                    switch (order.Status)
+                    {
+                        case OrderStatus.Pending:
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            break;
+                        case OrderStatus.Confirmed:
+                            Console.ForegroundColor = ConsoleColor.Cyan;
+                            break;
+                        case OrderStatus.Completed:
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            break;
+                        case OrderStatus.Cancelled:
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            break;
+                        case OrderStatus.Returned:
+                            Console.ForegroundColor = ConsoleColor.Magenta;
+                            break;
+                        default:
+                            Console.ResetColor();
+                            break;
+                    }
+                    Console.Write($"{order.Status,-10}");
+                    Console.ResetColor();
+                    Console.WriteLine($" | {order.OrderedAt:yyyy-MM-dd HH:mm} | {order.Total,8:C}");
                     foreach (var item in order.Items)
                     {
                         var productName = item.Products.FirstOrDefault()?.Name ?? "Unknown";
-                        Console.WriteLine($" - {productName} x {item.Count} @ {item.ProductPrice:C} = {item.SubTotal:C}");
+                        Console.WriteLine($"   -> {productName,-20} x {item.Count,-5} @ {item.ProductPrice,8:C} = {item.SubTotal,8:C}");
                     }
-                    Console.WriteLine($"TOTAL: {order.Total}");
-                    Console.WriteLine(new string('-', 45));
+                    Console.WriteLine(new string('-', 100));
                 }
                 if (pause)
                 {

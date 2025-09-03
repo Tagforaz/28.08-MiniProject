@@ -1,11 +1,5 @@
 [
   {
-    "Id": "59aee5ef-acbb-4203-900d-3d56642a8fda",
-    "Name": "545",
-    "Price": 252.0,
-    "Stock": 1345.0
-  },
-  {
     "Id": "1a442201-8e33-4969-b9c6-4bcaf618796f",
     "Name": "64374",
     "Price": 34563.0,
@@ -57,18 +51,6 @@
     "Id": "d8906be4-e50c-46cc-b86f-54d3cdff9307",
     "Name": "DAF",
     "Price": 12.0,
-    "Stock": 12.0
-  },
-  {
-    "Id": "afe3c4ee-f232-4235-8997-0eba630f7eab",
-    "Name": "AFA",
-    "Price": 123.0,
-    "Stock": 1345.0
-  },
-  {
-    "Id": "e52e36c2-e4a5-4513-9848-cc31dcc36e3b",
-    "Name": "HGHDH",
-    "Price": 747.0,
-    "Stock": 77093.0
+    "Stock": 0.0
   }
 ]
